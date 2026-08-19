@@ -16,14 +16,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const addToCart = useCallback(() => setCount((c) => c + 1), []);
 
-  const toggleWishlist = useCallback((id: string) => {
-    let added = false;
-    setWishlist((list) => {
-      added = !list.includes(id);
-      return added ? [...list, id] : list.filter((item) => item !== id);
-    });
-    return added;
-  }, []);
+  const toggleWishlist = useCallback(
+    (id: string) => {
+      const added = !wishlist.includes(id);
+      setWishlist((list) => (added ? [...list, id] : list.filter((item) => item !== id)));
+      return added;
+    },
+    [wishlist],
+  );
 
   const value = useMemo(
     () => ({
