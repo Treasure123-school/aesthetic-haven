@@ -9,12 +9,12 @@ export function SectionHeading({
   action,
   className,
 }: {
-  eyebrow?: string;
+  eyebrow?: string | undefined;
   title: string;
-  subtitle?: string;
+  subtitle?: string | undefined;
   align?: "center" | "left";
-  action?: ReactNode;
-  className?: string;
+  action?: ReactNode | undefined;
+  className?: string | undefined;
 }) {
   return (
     <div

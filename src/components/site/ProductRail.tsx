@@ -6,14 +6,14 @@ import { Reveal } from "@/components/site/Reveal";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  id?: string;
-  eyebrow?: string;
+  id?: string | undefined;
+  eyebrow?: string | undefined;
   title: string;
-  subtitle?: string;
+  subtitle?: string | undefined;
   products: Product[];
-  action?: ReactNode;
+  action?: ReactNode | undefined;
   variant?: "grid" | "scroll";
-  className?: string;
+  className?: string | undefined;
 };
 
 export function ProductRail({
